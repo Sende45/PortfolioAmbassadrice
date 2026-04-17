@@ -1,11 +1,13 @@
 import React from 'react';
+// Importation de l'image locale pour une netteté maximale
+import aminaPhoto from '../assets/AminaPic.png';
 
 const Home = () => {
   return (
     <div className="bg-[#070B18] text-white selection:bg-prestige-gold selection:text-prestige-dark">
       
       {/* --- SECTION HERO : L'AUTORITÉ --- */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-visible pt-20">
         {/* Décoration de fond (Filigrane) */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[35vw] font-serif font-black text-white/[0.01] whitespace-nowrap pointer-events-none select-none z-0">
           EXCELLENCE
@@ -22,9 +24,9 @@ const Home = () => {
                 </p>
               </div>
 
-              <h1 className="font-serif text-7xl md:text-[11rem] leading-[0.85] tracking-tighter animate-reveal" style={{ animationDelay: '0.2s' }}>
+              <h1 className="font-serif text-7xl md:text-[11rem] leading-[0.9] tracking-tighter animate-reveal pb-8 md:pb-12" style={{ animationDelay: '0.2s' }}>
                 Amina Priscille <br />
-                <span className="text-prestige-gold italic ml-12 md:ml-32">Longoh</span>
+                <span className="text-prestige-gold italic ml-12 md:ml-32 inline-block">Longoh</span>
               </h1>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 animate-reveal" style={{ animationDelay: '0.4s' }}>
@@ -53,15 +55,22 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Portrait Frame */}
+            {/* Portrait Frame - Image locale Haute Définition */}
             <div className="lg:col-span-4 hidden lg:block relative group animate-reveal" style={{ animationDelay: '0.6s' }}>
               <div className="relative aspect-[3/4] border border-white/5 p-4 transition-all duration-1000 group-hover:border-prestige-gold/30">
-                <div className="w-full h-full bg-[#0F172A] flex items-center justify-center overflow-hidden">
-                   <span className="text-prestige-gold/5 font-serif text-9xl italic group-hover:scale-110 transition-transform duration-1000">APL</span>
+                <div className="w-full h-full bg-[#0F172A] overflow-hidden relative">
+                   <img 
+                    src={aminaPhoto} 
+                    alt="Amina Priscille Longoh" 
+                    className="w-full h-full object-cover object-top transition-all duration-700 brightness-105 contrast-[1.02] group-hover:scale-110"
+                    loading="eager"
+                   />
+                   {/* Overlay très discret pour l'intégration */}
+                   <div className="absolute inset-0 bg-gradient-to-t from-[#070B18]/10 to-transparent pointer-events-none"></div>
                 </div>
-                <div className="absolute -bottom-8 -right-8 bg-prestige-cream p-10 shadow-2xl">
-                  <p className="text-prestige-dark font-black tracking-[0.4em] text-[10px] uppercase">Poste Actuel</p>
-                  <p className="text-prestige-dark font-serif italic text-xl mt-1">Paris, France</p>
+                <div className="absolute -bottom-8 -right-8 bg-white p-10 shadow-2xl z-20">
+                  <p className="text-[#070B18] font-black tracking-[0.4em] text-[10px] uppercase">Poste Actuel</p>
+                  <p className="text-[#070B18] font-serif italic text-xl mt-1">Paris, France</p>
                 </div>
               </div>
             </div>
@@ -88,18 +97,16 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-px bg-black/5 border border-black/5">
-            {/* Case 1 : Égalité (Large) */}
             <div className="md:col-span-8 p-16 bg-[#FDFBF6] group hover:bg-white transition-colors duration-700">
               <span className="text-[10px] text-prestige-gold font-black tracking-widest mb-12 block">01 / GENRE</span>
               <h3 className="text-4xl font-serif mb-8 group-hover:translate-x-4 transition-transform duration-500">
                 Parité Constitutionnelle
               </h3>
               <p className="text-black/50 leading-relaxed text-lg max-w-2xl font-light">
-                Impulsion d'une réforme historique portant la représentativité politique des femmes à <span className="text-prestige-dark font-bold">45 %</span>. Une avancée majeure pour la démocratie tchadienne.
+                Impulsion d'une réforme historique portant la représentativité politique des femmes à <span className="text-[#070B18] font-bold">45 %</span>. Une avancée majeure pour la démocratie tchadienne.
               </p>
             </div>
 
-            {/* Case 2 : Protection (Petite) */}
             <div className="md:col-span-4 p-12 bg-[#FDFBF6] group hover:bg-white transition-colors duration-700">
                <span className="text-[10px] text-prestige-gold font-black tracking-widest mb-8 block">02 / DROITS</span>
                <h3 className="text-2xl font-serif mb-6">Centres Intégrés</h3>
@@ -108,7 +115,6 @@ const Home = () => {
                </p>
             </div>
 
-            {/* Case 3 : État Civil */}
             <div className="md:col-span-5 p-12 bg-[#FDFBF6] group hover:bg-white transition-colors duration-700 border-t border-black/5">
                <span className="text-[10px] text-prestige-gold font-black tracking-widest mb-8 block">03 / SOCIAL</span>
                <h3 className="text-2xl font-serif mb-6">Enregistrement État Civil</h3>
@@ -117,7 +123,6 @@ const Home = () => {
                </p>
             </div>
 
-            {/* Case 4 : G5 Sahel (Large) */}
             <div className="md:col-span-7 p-12 bg-[#070B18] text-white group overflow-hidden relative border-t border-black/5">
                <div className="relative z-10">
                  <span className="text-[10px] text-prestige-gold font-black tracking-widest mb-8 block">04 / RÉGIONAL</span>
@@ -126,7 +131,6 @@ const Home = () => {
                    Architecture de la politique nationale genre au sein de l'espace Sahel, positionnant le Tchad comme leader sur ces questions.
                  </p>
                </div>
-               {/* Décoration subtile en fond de carte */}
                <div className="absolute -bottom-10 -right-10 text-white/[0.03] text-9xl font-serif italic pointer-events-none">SAHEL</div>
             </div>
           </div>
