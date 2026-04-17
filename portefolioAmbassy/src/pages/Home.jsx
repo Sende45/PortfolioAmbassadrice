@@ -7,15 +7,19 @@ const Home = () => {
     <div className="bg-[#070B18] text-white selection:bg-prestige-gold selection:text-prestige-dark">
       
       {/* --- SECTION HERO : L'AUTORITÉ --- */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-visible pt-20">
-        {/* Décoration de fond (Filigrane) */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[35vw] font-serif font-black text-white/[0.01] whitespace-nowrap pointer-events-none select-none z-0">
+      {/* Correction : overflow-hidden pour éviter le scroll horizontal et items-center pour la stabilité */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        
+        {/* Décoration de fond (Filigrane) - pointer-events-none ajouté pour ne pas gêner le clic */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[30vw] font-serif font-black text-white/[0.01] whitespace-nowrap pointer-events-none select-none z-0">
           EXCELLENCE
         </div>
 
         <div className="container mx-auto px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          {/* Correction de la grille : passage en lg:grid-cols-12 pour un meilleur ratio texte/image */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
+            {/* Texte à gauche - Élargi à 8 colonnes pour éviter de pousser l'image */}
             <div className="lg:col-span-8 space-y-12">
               <div className="flex items-center gap-4 animate-reveal">
                 <span className="w-16 h-[1px] bg-prestige-gold"></span>
@@ -24,21 +28,23 @@ const Home = () => {
                 </p>
               </div>
 
-              <h1 className="font-serif text-7xl md:text-[11rem] leading-[0.9] tracking-tighter animate-reveal pb-8 md:pb-12" style={{ animationDelay: '0.2s' }}>
+              {/* Correction de la taille de police : utilisation de text-8xl à 11rem max pour rester dans le cadre */}
+              <h1 className="font-serif text-6xl md:text-8xl xl:text-[10rem] leading-[0.85] tracking-tighter animate-reveal pb-8" style={{ animationDelay: '0.2s' }}>
                 Amina Priscille <br />
-                <span className="text-prestige-gold italic ml-12 md:ml-32 inline-block">Longoh</span>
+                <span className="text-prestige-gold italic ml-8 md:ml-32 inline-block">Longoh</span>
               </h1>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 animate-reveal" style={{ animationDelay: '0.4s' }}>
-                <p className="text-white/40 text-lg font-light leading-relaxed border-l border-white/10 pl-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 animate-reveal" style={{ animationDelay: '0.4s' }}>
+                {/* Max-width ajouté pour empêcher le texte de s'étaler trop loin à droite */}
+                <p className="text-white/40 text-lg font-light leading-relaxed border-l border-white/10 pl-8 max-w-md">
                   Ambassadeur Extraordinaire auprès de la France. 
                   <span className="text-white/80 block mt-4 italic font-serif text-xl">
                     "Une diplomatie de vision, un leadership d'action."
                   </span>
                 </p>
                 
-                {/* Stats Minimalistes */}
-                <div className="flex justify-between items-end border-b border-white/5 pb-6">
+                {/* Stats Minimalistes - Max-width pour garder le bloc compact */}
+                <div className="flex justify-between items-end border-b border-white/5 pb-6 max-w-xs">
                    <div className="text-center">
                       <span className="block text-3xl font-serif text-prestige-gold">12+</span>
                       <span className="text-[8px] uppercase tracking-widest text-white/30 font-bold">Années</span>
@@ -55,7 +61,7 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Portrait Frame - Image locale Haute Définition */}
+            {/* Portrait Frame - Fixé sur 4 colonnes pour la stabilité */}
             <div className="lg:col-span-4 hidden lg:block relative group animate-reveal" style={{ animationDelay: '0.6s' }}>
               <div className="relative aspect-[3/4] border border-white/5 p-4 transition-all duration-1000 group-hover:border-prestige-gold/30">
                 <div className="w-full h-full bg-[#0F172A] overflow-hidden relative">
@@ -65,12 +71,12 @@ const Home = () => {
                     className="w-full h-full object-cover object-top transition-all duration-700 brightness-105 contrast-[1.02] group-hover:scale-110"
                     loading="eager"
                    />
-                   {/* Overlay très discret pour l'intégration */}
                    <div className="absolute inset-0 bg-gradient-to-t from-[#070B18]/10 to-transparent pointer-events-none"></div>
                 </div>
-                <div className="absolute -bottom-8 -right-8 bg-white p-10 shadow-2xl z-20">
+                {/* Badge de poste - text-nowrap pour éviter les retours à la ligne brusques */}
+                <div className="absolute -bottom-8 -right-8 bg-white p-10 shadow-2xl z-20 min-w-[220px]">
                   <p className="text-[#070B18] font-black tracking-[0.4em] text-[10px] uppercase">Poste Actuel</p>
-                  <p className="text-[#070B18] font-serif italic text-xl mt-1">Paris, France</p>
+                  <p className="text-[#070B18] font-serif italic text-xl mt-1 whitespace-nowrap">Ambassadrice, Paris</p>
                 </div>
               </div>
             </div>
