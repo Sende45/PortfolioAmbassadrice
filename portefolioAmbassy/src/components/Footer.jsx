@@ -88,7 +88,7 @@ const Footer = () => {
               Ambassade du Tchad à Paris
             </p>
             <p className="text-[8px] uppercase tracking-[0.2em] text-white/10 italic">
-              Conçu avec Excellence par <span className="text-white/30 hover:text-prestige-gold transition-colors cursor-pointer uppercase">GYO groupe</span>
+              Conçu avec Excellence par <span className="text-white/30 hover:text-prestige-gold transition-colors cursor-pointer uppercase">Eden group</span>
             </p>
           </div>
 
