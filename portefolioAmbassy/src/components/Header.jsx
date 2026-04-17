@@ -41,19 +41,25 @@ const Header = () => {
           </ul>
         </nav>
 
-        {/* 3. Bouton d'Action avec Micro-Interaction */}
+        {/* 3. Bouton d'Action & Lien Ambassade */}
         <div className="flex items-center gap-8">
           <button className="hidden lg:flex items-center gap-3 text-[9px] uppercase tracking-[0.3em] font-bold text-white/40 hover:text-prestige-gold transition-all group">
             <span className="w-6 h-[1px] bg-white/10 group-hover:bg-prestige-gold group-hover:w-10 transition-all"></span>
             FR / EN
           </button>
           
-          <button className="relative overflow-hidden border border-white/10 px-8 py-3 group">
+          {/* Lien vers le site officiel de l'ambassade */}
+          <a 
+            href="https://ambatchadparis.fr/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="relative overflow-hidden border border-white/10 px-8 py-3 group block"
+          >
             <span className="relative z-10 text-[9px] uppercase tracking-[0.3em] font-bold text-prestige-cream group-hover:text-prestige-dark transition-colors duration-500">
               Ambassade
             </span>
             <div className="absolute inset-0 bg-prestige-gold translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
-          </button>
+          </a>
         </div>
 
       </div>
