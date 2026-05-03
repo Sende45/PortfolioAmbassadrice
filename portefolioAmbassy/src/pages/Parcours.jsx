@@ -10,14 +10,6 @@ const Parcours = () => {
       description: "Représentation officielle et conduite des relations bilatérales. Négociation d'accords politiques et économiques majeurs.",
       location: "France"
     },
-     {
-      date: "2020",
-      period: "2020-2026",
-      institution: "REFAMP",
-      poste: "Présidente",
-      description: "Réseau des Femmes Africaines Ministres et Parlementaires REFAMP/ Tchad",
-      location: "Afrique"
-    },
     {
       date: "2025",
       period: "JUILLET — PRÉSENT",
@@ -25,6 +17,14 @@ const Parcours = () => {
       poste: "Conseillère Spéciale du Chef de l’Etat",
       description: "Représentation au Conseil permanent de la Francophonie (CPF). Analyse diplomatique et stratégique de l'espace francophone.",
       location: "Tchad"
+    },
+     {
+      date: "2020",
+      period: "2020-2026",
+      institution: "REFAMP",
+      poste: "Présidente",
+      description: "Réseau des Femmes Africaines Ministres et Parlementaires REFAMP/ Tchad",
+      location: "Afrique"
     },
     {
       date: "2020",
