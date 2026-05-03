@@ -54,7 +54,7 @@ const Parcours = () => {
       date: "2019",
       period: "2019 - 07/2020",
       institution: "Union Panafricaine de la Jeunesse",
-      poste: "Commissaire Éducation",
+      poste: "Commissaire Éducation et compétences",
       description: "Mise en œuvre de l'Agenda 2063 de l'UA et des programmes de l'UNESCO pour la représentativité des jeunes.",
       location: "Tchad"
     },
