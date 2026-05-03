@@ -8,7 +8,15 @@ const Parcours = () => {
       institution: "Ambassade du Tchad en France",
       poste: "Ambassadeur Extraordinaire et Plénipotentiaire",
       description: "Représentation officielle et conduite des relations bilatérales. Négociation d'accords politiques et économiques majeurs.",
-      location: "Paris"
+      location: "France"
+    },
+     {
+      date: "2020",
+      period: "2020-2026",
+      institution: "REFAMP",
+      poste: "Présidente",
+      description: "Réseau des Femmes Africaines Ministres et Parlementaires REFAMP/ Tchad",
+      location: "Afrique"
     },
     {
       date: "2025",
@@ -16,7 +24,7 @@ const Parcours = () => {
       institution: "OIF",
       poste: "Conseillère Spéciale du Chef de l’Etat",
       description: "Représentation au Conseil permanent de la Francophonie (CPF). Analyse diplomatique et stratégique de l'espace francophone.",
-      location: "International"
+      location: "Tchad"
     },
     {
       date: "2020",
@@ -24,11 +32,11 @@ const Parcours = () => {
       institution: "Ministère de la Femme",
       poste: "Ministre d'État",
       description: "Pilotage des réformes nationales pour l'autonomisation des femmes, la protection de l'enfance et l'équité des chances.",
-      location: "N'Djaména"
+      location: "Tchad"
     },
     {
       date: "2020",
-      period: "MANDAT 2020 — 2025",
+      period: "MANDAT 2020 — 2024",
       institution: "REFAMP / G5 Sahel",
       poste: "Présidente / Tutelle Régionale",
       description: "Plaidoyer de haut niveau pour la participation politique des femmes et coordination du conseil des ministres du genre du G5 Sahel.",
@@ -43,8 +51,16 @@ const Parcours = () => {
       location: "Tchad"
     },
     {
-      date: "2018",
-      period: "FONDATRICE",
+      date: "2019",
+      period: "2019 - 07/2020",
+      institution: "Union Panafricaine de la Jeunesse",
+      poste: "Commissaire Éducation",
+      description: "Mise en œuvre de l'Agenda 2063 de l'UA et des programmes de l'UNESCO pour la représentativité des jeunes.",
+      location: "Tchad"
+    },
+    {
+      date: "2016",
+      period: "2016 - PRESENT",
       institution: "Fondation Tchad Helping Hands",
       poste: "Présidente",
       description: "Encadrement d'activités caritatives et plaidoyer pour l'éducation des filles et l'insertion des jeunes.",
@@ -65,14 +81,6 @@ const Parcours = () => {
       poste: "Agent Front Office",
       description: "Gestion et fidélisation du portefeuille clients. Mise en œuvre de la politique commerciale et reporting analytique.",
       location: "Tchad"
-    },
-    {
-      date: "2017",
-      period: "COMMISSAIRE",
-      institution: "Union Panafricaine de la Jeunesse",
-      poste: "Commissaire Éducation",
-      description: "Mise en œuvre de l'Agenda 2063 de l'UA et des programmes de l'UNESCO pour la représentativité des jeunes.",
-      location: "Afrique"
     }
   ];
 
