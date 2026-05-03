@@ -7,7 +7,7 @@ const Home = () => {
     <div className="bg-[#070B18] text-white selection:bg-prestige-gold selection:text-prestige-dark overflow-x-hidden">
       
       {/* --- SECTION HERO : L'AUTORITÉ --- */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16 md:pt-20 md:pb-0">
         
         {/* Décoration de fond (Filigrane) - Caché sur mobile pour la clarté, visible dès md */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[30vw] font-serif font-black text-white/[0.01] whitespace-nowrap pointer-events-none select-none z-0 hidden md:block">
@@ -15,11 +15,12 @@ const Home = () => {
         </div>
 
         <div className="container mx-auto px-6 md:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Grille principale : s'empile sur mobile, côte à côte dès lg */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
             
             {/* Texte à gauche */}
-            <div className="lg:col-span-8 space-y-8 md:space-y-12 text-center lg:text-left">
-              <div className="flex items-center justify-center lg:justify-start gap-4 animate-reveal">
+            <div className="lg:col-span-8 space-y-8 md:space-y-12 text-center lg:text-left flex flex-col items-center lg:items-start">
+              <div className="flex items-center justify-center lg:justify-start gap-4 animate-reveal w-full">
                 <span className="w-12 md:w-16 h-[1px] bg-prestige-gold"></span>
                 <p className="text-prestige-gold tracking-[0.4em] md:tracking-[0.6em] uppercase text-[8px] md:text-[10px] font-black">
                   République du Tchad • État & Diplomatie
@@ -27,12 +28,33 @@ const Home = () => {
               </div>
 
               {/* Titre Fluide : s'adapte à toutes les tailles d'écran */}
-              <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl xl:text-[10rem] leading-[0.9] tracking-tighter animate-reveal pb-4 md:pb-8" style={{ animationDelay: '0.2s' }}>
+              <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl xl:text-[10rem] leading-[0.9] tracking-tighter animate-reveal pb-4 md:pb-8 w-full" style={{ animationDelay: '0.2s' }}>
                 Amina Priscille <br />
                 <span className="text-prestige-gold italic ml-0 md:ml-32 inline-block">Longoh</span>
               </h1>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 pt-4 md:pt-8 animate-reveal text-left" style={{ animationDelay: '0.4s' }}>
+              {/* --- PORTRAIT MOBILE (Visible uniquement sur mobile/tablette, caché dès lg) --- */}
+              <div className="w-full max-w-sm mx-auto lg:hidden animate-reveal" style={{ animationDelay: '0.4s' }}>
+                <div className="relative aspect-[3/4] border border-white/10 p-3 shadow-2xl">
+                  <div className="w-full h-full bg-[#0F172A] overflow-hidden relative">
+                    <img 
+                      src={aminaPhoto} 
+                      alt="Amina Priscille Longoh" 
+                      className="w-full h-full object-cover object-top brightness-105 contrast-[1.02]"
+                      loading="eager"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#070B18]/20 to-transparent pointer-events-none"></div>
+                  </div>
+                  {/* Badge de poste sur mobile */}
+                  <div className="absolute -bottom-4 -right-4 bg-white p-5 shadow-xl z-20 min-w-[150px] text-left">
+                    <p className="text-[#070B18] font-black tracking-[0.3em] text-[8px] uppercase">Poste Actuel</p>
+                    <p className="text-[#070B18] font-serif italic text-lg mt-0.5 whitespace-nowrap">Ambassadrice, Paris</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Description et Stats */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 pt-8 md:pt-8 animate-reveal text-left w-full" style={{ animationDelay: '0.6s' }}>
                 <p className="text-white/40 text-base md:text-lg font-light leading-relaxed border-l border-white/10 pl-6 md:pl-8 max-w-md mx-auto lg:mx-0">
                   Ambassadeur Extraordinaire auprès de la France. 
                   <span className="text-white/80 block mt-4 italic font-serif text-lg md:text-xl">
@@ -41,7 +63,7 @@ const Home = () => {
                 </p>
                 
                 {/* Stats Responsive */}
-                <div className="flex justify-between items-end border-b border-white/5 pb-6 max-w-xs mx-auto lg:mx-0 w-full">
+                <div className="flex justify-between items-end border-b border-white/5 pb-6 max-w-xs mx-auto lg:mx-0 w-full h-full">
                    <div className="text-center">
                       <span className="block text-2xl md:text-3xl font-serif text-prestige-gold">12+</span>
                       <span className="text-[7px] md:text-[8px] uppercase tracking-widest text-white/30 font-bold">Années</span>
@@ -58,9 +80,9 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Portrait - Visible uniquement sur desktop pour garder le focus sur mobile */}
-            <div className="lg:col-span-4 hidden lg:block relative group animate-reveal" style={{ animationDelay: '0.6s' }}>
-              <div className="relative aspect-[3/4] border border-white/5 p-4 transition-all duration-1000 group-hover:border-prestige-gold/30">
+            {/* --- PORTRAIT DESKTOP (Caché sur mobile, visible dès lg) --- */}
+            <div className="lg:col-span-4 hidden lg:block relative group animate-reveal" style={{ animationDelay: '0.8s' }}>
+              <div className="relative aspect-[3/4] border border-white/5 p-4 transition-all duration-1000 group-hover:border-prestige-gold/30 shadow-2xl">
                 <div className="w-full h-full bg-[#0F172A] overflow-hidden relative">
                    <img 
                     src={aminaPhoto} 
@@ -70,6 +92,7 @@ const Home = () => {
                    />
                    <div className="absolute inset-0 bg-gradient-to-t from-[#070B18]/10 to-transparent pointer-events-none"></div>
                 </div>
+                {/* Badge de poste sur Desktop */}
                 <div className="absolute -bottom-8 -right-8 bg-white p-10 shadow-2xl z-20 min-w-[220px]">
                   <p className="text-[#070B18] font-black tracking-[0.4em] text-[10px] uppercase">Poste Actuel</p>
                   <p className="text-[#070B18] font-serif italic text-xl mt-1 whitespace-nowrap">Ambassadrice, Paris</p>
