@@ -37,7 +37,7 @@ const Parcours = () => {
     {
       date: "2020",
       period: "MANDAT 2020 — 2024",
-      institution: "REFAMP / G5 Sahel",
+      institution: "G5 Sahel",
       poste: "Présidente / Tutelle Régionale",
       description: "Plaidoyer de haut niveau pour la participation politique des femmes et coordination du conseil des ministres du genre du G5 Sahel.",
       location: "Afrique"
