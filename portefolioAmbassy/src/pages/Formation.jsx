@@ -3,23 +3,48 @@ import React from 'react';
 const Formation = () => {
   const diplomes = [
     {
-      annee: "2023",
-      titre: "Master in Public Administration (MPA)",
-      ecole: "Columbia University - SIPA",
-      lieu: "New York, USA"
-    },
-    {
-      annee: "2022",
-      titre: "Executive Master en Relations Internationales",
+      annee: "2024",
+      titre: "MPA Etudes Diplomatiques et Relations Internationales",
       ecole: "CEDS Paris",
       lieu: "France"
     },
     {
-      annee: "2013",
-      titre: "Bachelor en Finance & Management",
-      ecole: "GIMPA Accra",
+      annee: "2023",
+      titre: "Spécialisation en Diplomates Innovantes",
+      ecole: "CEDS Paris",
+      lieu: "France"
+    },
+    {
+      annee: "2015-2016",
+      titre: "Master | communication des institutions",
+      ecole: "Sup' Management School of Business",
+      lieu: "Tchad"
+    },
+    {
+      annee: "2015",
+      titre: "Licence | gestion & administration des Entreprises",
+      ecole: "Institut Supérieur Polytechnique De Reference (ISPR)",
+      lieu: "Tchad"
+    },
+     {
+      annee: "2014",
+      titre: "Certificat des responsables des services généraux",
+      ecole: "Cegos",
+      lieu: "France"
+    },
+     {
+      annee: "2010-2012",
+      titre: "Advanced diploma in business management",
+      ecole: "Wintech Professional Institute",
       lieu: "Ghana"
+    },
+     {
+      annee: "2009",
+      titre: "Baccalaureat serie A4 ",
+      ecole: "Lycée Adventiste",
+      lieu: "Tchad"
     }
+
   ];
 
   const langues = [

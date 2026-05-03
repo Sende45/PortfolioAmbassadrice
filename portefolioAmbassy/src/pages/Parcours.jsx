@@ -14,25 +14,49 @@ const Parcours = () => {
       date: "2025",
       period: "JUILLET — PRÉSENT",
       institution: "Organisation Internationale de la Francophonie (OIF)",
-      poste: "Conseillère Spéciale du Chef de l'État",
-      description: "Représentation du Tchad au Conseil permanent de la Francophonie (CPF). Contribution stratégique aux débats sur l'égalité des genres et les droits humains.",
+      poste: "Conseillère Spéciale, Représentante Personnelle du Chef de l’Etat auprès de l’OIF",
+      description: "Représentation au CPF et à l'OIF. Élaboration des positions diplomatiques, analyse de la situation politique et budgétaire de l'espace francophone, et contribution aux résolutions sur l'égalité des genres et les droits de l'homme.",
       location: "International"
     },
     {
       date: "2020",
       period: "JUILLET 2020 — JUILLET 2025",
-      institution: "République du Tchad",
+      institution: "Ministère de la Femme",
       poste: "Ministre d'État — Femme & Protection de l'Enfance",
-      description: "Conception et mise en œuvre de la politique gouvernementale. Pilotage de réformes historiques pour l'autonomisation des femmes et la parité nationale.",
+      description: "Pilotage de la politique nationale de promotion de la femme et de la famille. Réformes pour l'autonomisation socio-économique, l'équité des chances et la protection des personnes vulnérables.",
       location: "N'Djaména"
     },
     {
       date: "2020",
       period: "MANDAT 2020 — 2025",
       institution: "REFAMP / TCHAD",
-      poste: "Présidente du Réseau des Femmes Africaines",
-      description: "Promotion de la participation politique des femmes et plaidoyer de haut niveau pour l'égalité des sexes et la paix régionale.",
-      location: "Afrique du G5 Sahel"
+      poste: "Présidente du Réseau des Femmes Africaines Ministres et Parlementaires",
+      description: "Plaidoyer pour la participation politique des femmes, renforcement des capacités, suivi des politiques d'égalité et contribution active à la paix et à la sécurité régionale.",
+      location: "Tchad"
+    },
+    {
+      date: "2020",
+      period: "MANDAT 2020 — 2025",
+      institution: "G5 Sahel",
+      poste: "Présidente de tutelle — Plateforme régionale des femmes",
+      description: "Coordination du conseil des ministres en charge du genre de l'espace G5 Sahel. Mise en œuvre du plan d'action des plateformes nationales et de la politique genre régionale.",
+      location: "Sahel"
+    },
+    {
+      date: "2018",
+      period: "FONDATRICE",
+      institution: "Fondation Tchad Helping Hands",
+      poste: "Présidente",
+      description: "Coordination d'activités caritatives, plaidoyer pour l'éducation des filles, la justice sociale et l'insertion socio-économique des femmes et des jeunes.",
+      location: "Tchad"
+    },
+    {
+      date: "2017",
+      period: "MANDAT PANAFRICAIN",
+      institution: "Union Panafricaine de la Jeunesse",
+      poste: "Commissaire éducation & compétences",
+      description: "Mise en œuvre du pilier éducation de l'Agenda 2063 de l'Union Africaine, programmes de l'UNESCO et plaidoyer pour la représentativité des jeunes.",
+      location: "Afrique"
     }
   ];
 
@@ -63,7 +87,7 @@ const Parcours = () => {
         </div>
 
         <div className="relative">
-          {/* Ligne centrale de la Timeline (Ultra-fine) */}
+          {/* Ligne centrale de la Timeline */}
           <div className="absolute left-0 md:left-1/2 top-0 w-[1px] h-full bg-gradient-to-b from-prestige-gold/50 via-white/5 to-transparent"></div>
 
           <div className="space-y-32">
@@ -82,14 +106,14 @@ const Parcours = () => {
                   </div>
                 </div>
 
-                {/* 2. Le Point d'Ancrage Milieu */}
+                {/* 2. Le Point d'Ancrage */}
                 <div className="absolute left-0 md:left-1/2 top-4 md:top-1/2 w-4 h-4 -translate-x-1/2 -translate-y-1/2 z-20">
                   <div className="w-full h-full rounded-full bg-[#070B18] border border-prestige-gold flex items-center justify-center">
                     <div className="w-1 h-1 bg-prestige-gold rounded-full group-hover:scale-[3] transition-transform duration-500"></div>
                   </div>
                 </div>
 
-                {/* 3. Bloc Contenu (La Carte) */}
+                {/* 3. Bloc Contenu */}
                 <div className="w-full md:w-[45%] pl-10 md:pl-0">
                   <div className={`space-y-4 ${index % 2 === 0 ? 'md:pl-16' : 'md:pr-16 text-right'}`}>
                     <p className="text-[10px] uppercase tracking-[0.3em] text-white/30 font-bold italic">
@@ -115,7 +139,7 @@ const Parcours = () => {
         </div>
       </div>
 
-      {/* Bouton de téléchargement CV - Subtil */}
+      {/* Bouton de téléchargement CV */}
       <div className="mt-32 flex justify-center pb-12">
         <button className="group flex flex-col items-center gap-4">
           <span className="text-[9px] uppercase tracking-[0.6em] text-white/20 group-hover:text-prestige-gold transition-colors font-bold">Consulter le dossier complet</span>
