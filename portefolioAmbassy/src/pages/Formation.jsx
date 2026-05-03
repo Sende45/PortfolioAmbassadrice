@@ -10,7 +10,7 @@ const Formation = () => {
     },
     {
       annee: "2023",
-      titre: "Spécialisation en Diplomates Innovantes",
+      titre: "Spécialisation en Diplomaties Innovantes",
       ecole: "CEDS Paris",
       lieu: "France"
     },
@@ -75,8 +75,8 @@ const Formation = () => {
             <div className="space-y-16">
               {diplomes.map((item, index) => (
                 <div key={index} className="group relative pl-12 md:pl-20 border-l border-black/5 hover:border-prestige-gold transition-colors duration-700">
-                  <span className="absolute left-0 top-0 text-5xl md:text-7xl font-serif font-black text-black/[0.03] -translate-x-1/2 group-hover:text-prestige-gold/10 transition-colors">
-                    {item.annee}
+                  <span className="absolute left-0 top-0 text-5xl md:text-7xl font-serif font-black text-prestige-gold/20 -translate-x-1/2 group-hover:text-prestige-gold/40 transition-all duration-500 select-none">
+                  {item.annee}
                   </span>
                   <div className="space-y-2">
                     <h3 className="text-2xl md:text-3xl font-serif tracking-tight leading-tight group-hover:translate-x-2 transition-transform duration-500">
