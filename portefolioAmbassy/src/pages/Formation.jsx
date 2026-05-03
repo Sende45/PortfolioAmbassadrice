@@ -15,7 +15,7 @@ const Formation = () => {
       lieu: "France"
     },
     {
-      annee: "2015-2016",
+      annee: "2016",
       titre: "Master | communication des institutions",
       ecole: "Sup' Management School of Business",
       lieu: "Tchad"
